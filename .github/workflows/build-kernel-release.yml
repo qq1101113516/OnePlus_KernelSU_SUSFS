@@ -58,6 +58,18 @@ jobs:
             manifest: oneplus_11_v.xml
             android_version: android13
             kernel_version: "5.15"
+         - model: OP11
+            soc: kalama
+            branch: oneplus/sm8550
+            manifest: oneplus_11_t.xml
+            android_version: android13
+            kernel_version: "5.15"
+         - model: OP11
+            soc: kalama
+            branch: oneplus/sm8550
+            manifest: oneplus_11_u.xml
+            android_version: android13
+            kernel_version: "5.15"
           - model: OP11r
             soc: waipio
             branch: oneplus/sm8475
