@@ -63,7 +63,7 @@ jobs:
           - model: OP11
             soc: kalama
             branch: oneplus/sm8550
-            manifest: oneplus_11_v.xml
+            manifest: oneplus_11_t.xml
             android_version: android13
             kernel_version: '5.15'
           - model: OP13
