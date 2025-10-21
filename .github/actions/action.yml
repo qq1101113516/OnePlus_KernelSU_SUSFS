@@ -223,14 +223,14 @@ runs:
         rm -f msm-kernel/android/abi_gki_protected_exports_* || true
         df -h
 
-   # - name: Add BBG
+    - name: Add BBG
       shell: bash
       run: |
         set -euo pipefail
         cd "$CONFIG/kernel_platform"
         echo "Adding BBG..."
         wget -O- https://github.com/vc-teahouse/Baseband-guard/raw/main/setup.sh | bash
-        echo "CONFIG_BBG=y" >> common/arch/arm64/configs/gki_defconfig
+        echo "CONFIG_BBG=n" >> common/arch/arm64/configs/gki_defconfig
         sed -i '/^config LSM$/,/^help$/{ /^[[:space:]]*default/ { /baseband_guard/! s/lockdown/lockdown,baseband_guard/ } }' common/security/Kconfig
 
     - name: Add KernelSU Next
