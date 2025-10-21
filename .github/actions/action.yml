@@ -223,7 +223,7 @@ runs:
         rm -f msm-kernel/android/abi_gki_protected_exports_* || true
         df -h
 
-    - name: Add BBG
+   # - name: Add BBG
       shell: bash
       run: |
         set -euo pipefail
